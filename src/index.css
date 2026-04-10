@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-oled-bg: #0a0a0a;
+  --color-oled-pixel: #4fc3f7;
+  --color-oled-pixel-bright: #81d4fa;
+  --color-oled-grid: #1a1a1a;
+  --color-panel-bg: #111111;
+  --color-panel-border: #2a2a2a;
+  --color-panel-hover: #1e1e1e;
+  --color-accent: #4fc3f7;
+  --color-accent-dim: #2a7a9e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #050505;
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.tool-btn {
+  transition: all 0.15s ease;
+}
+
+.tool-btn:hover {
+  background-color: var(--color-panel-hover);
+  border-color: var(--color-accent-dim);
+}
+
+.tool-btn.active {
+  background-color: rgba(79, 195, 247, 0.15);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.oled-glow {
+  box-shadow: 0 0 20px rgba(79, 195, 247, 0.08), 0 0 60px rgba(79, 195, 247, 0.04);
+}
+
+.code-output {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  tab-size: 2;
+}
